@@ -36,4 +36,34 @@ cp -r build/bin/geth /usr/bin/
 cd ..
 ```
 
-### 
+### generate data
+```shell
+geth init genesis.json
+```
+
+### export block_signer_address and block_signer_key
+```shell
+export BLOCK_SIGNER_KEY=6587ae678cf4fc9a33000cdbf9f35226b71dcc6a4684a31203241f9bcfd55d27
+export BLOCK_SIGNER_ADDRESS=0x00000398232E2064F896018496b4b44b3D62751F
+```
+
+### generate keystore
+```shell
+echo "Importing private key"
+echo $BLOCK_SIGNER_KEY > key.prv
+echo "pwd" > password
+geth account import --password ./password ./key.prv
+```
+
+
+### start geth
+```shell
+geth \
+  --verbosity=6 \
+  --password ./password \
+  --allow-insecure-unlock \
+  --unlock $BLOCK_SIGNER_ADDRESS \
+  --mine \
+  --miner.etherbase $BLOCK_SIGNER_ADDRESS \
+  --no-discover
+```

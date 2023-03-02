@@ -1,25 +1,31 @@
 {
   "commit": "eb400f232e49b431ad1484dcc52da8b34398019c",
   "config": {
-    "chainId": 17,
+    "chainId": 53077,
     "homesteadBlock": 0,
     "eip150Block": 0,
+    "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "eip155Block": 0,
     "eip158Block": 0,
     "byzantiumBlock": 0,
     "constantinopleBlock": 0,
     "petersburgBlock": 0,
     "istanbulBlock": 0,
-    "muirGlacierBlock": 0,
     "berlinBlock": 0,
+    "londonBlock": 0,
     "clique": {
-      "period": 0,
+      "period": 15,
       "epoch": 30000
-    }
+    },
+    "zktrie": true
   },
   "difficulty": "1",
   "gasLimit": "15000000",
   "extradata": "0x000000000000000000000000000000000000000000000000000000000000000000000398232E2064F896018496b4b44b3D62751F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit": "0x6691b7",
+  "difficulty": "0x1",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "coinbase": "0x0000000000000000000000000000000000000000",
   "alloc": {
     "0x63EB358137cd06290544e71210c140B345C6FF10": {
       "balance": "100000000000000000000000"
@@ -39,5 +45,9 @@
     "0x733e38C8C6fEf12D3916eAc679Ef8f5Ffb39127B": {
       "balance": "100000000000000000000000"
     }
-  }
+  },
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "baseFeePerGas": null
 }
