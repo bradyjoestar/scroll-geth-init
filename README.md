@@ -33,6 +33,10 @@ cd go-ethereum
 make all
 # rm -rf /usr/bin/geth
 cp -r build/bin/geth /usr/bin/geth_zkscroll
+
+# for mac
+# cp -r build/bin/geth /opt/homebrew/bin/geth_zkscroll
+
 cd ..
 ```
 
