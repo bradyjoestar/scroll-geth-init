@@ -31,14 +31,14 @@ git clone https://github.com/bradyjoestar/go-ethereum.git
 cd go-ethereum
 
 make all
-rm -rf /usr/bin/geth
-cp -r build/bin/geth /usr/bin/
+# rm -rf /usr/bin/geth
+cp -r build/bin/geth /usr/bin/geth_zkscroll
 cd ..
 ```
 
 ### generate data
 ```shell
-geth init genesis.json
+geth_zkscroll init genesis.json
 ```
 
 ### export block_signer_address and block_signer_key
@@ -52,13 +52,13 @@ export BLOCK_SIGNER_ADDRESS=0x00000398232E2064F896018496b4b44b3D62751F
 echo "Importing private key"
 echo $BLOCK_SIGNER_KEY > key.prv
 echo "pwd" > password
-geth account import --password ./password ./key.prv
+geth_zkscroll account import --password ./password ./key.prv
 ```
 
 
 ### start geth
 ```shell
-geth \
+geth_zkscroll \
   --verbosity=6 \
   --password ./password \
   --allow-insecure-unlock \
@@ -71,7 +71,7 @@ geth \
 
 ### start geth2
 ```shell
-geth \
+geth_zkscroll \
   --verbosity=6 \
   --password ./password \
   --allow-insecure-unlock \
